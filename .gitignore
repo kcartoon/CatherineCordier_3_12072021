@@ -1,0 +1,8 @@
+# ignore tous les fichiers extension .json
+*.json
+# ignore tous les fichiers memento txt
+*.txt
+# ignore tous les fichiers .pdf
+*.pdf
+# ignore repertoire Maquette Ohmyfood
+/Maquettes Ohmyfood/*

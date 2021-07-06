@@ -1,0 +1,13 @@
+/*Polices= Logo et titres: Shrikand Texte: Roboto*/
+/* Palettes Couleur */
+.primaire {
+    color:#9356DC;
+}
+.secondaire {
+    color:#FF79DA;
+}
+.tertiaire {
+    color:#99E2D0;
+}
+
+@media screen and (min-width: 768px){}
