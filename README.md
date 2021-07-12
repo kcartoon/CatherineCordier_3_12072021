@@ -1,5 +1,5 @@
 Site ohmyfood
-Parcours commencé le 6 juillet
+Parcours commencé le 12 juillet
 Début du projet
 
 Technologie
