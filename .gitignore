@@ -1,5 +1,5 @@
 # ignore tous les fichiers extension .json
-*.json
+/.vscode/*
 # ignore tous les fichiers memento txt
 *.txt
 # ignore tous les fichiers .pdf

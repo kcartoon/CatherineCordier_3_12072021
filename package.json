@@ -1,0 +1,23 @@
+{
+  "name": "catherinecordier_3_12072021",
+  "version": "1.0.0",
+  "description": "Projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcartoon/CatherineCordier_3_12072021.git"
+  },
+  "author": "Cordier Catherine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcartoon/CatherineCordier_3_12072021/issues"
+  },
+  "homepage": "https://github.com/kcartoon/CatherineCordier_3_12072021#readme",
+  "dependencies": {
+    "sass":"1.35.2"
+  }
+
+}
