@@ -5,4 +5,4 @@
 # ignore tous les fichiers .pdf
 *.pdf
 # ignore repertoire Maquette Ohmyfood
-/Maquettes Ohmyfood/*
+/support/*
