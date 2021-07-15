@@ -6,3 +6,5 @@
 *.pdf
 # ignore repertoire Maquette Ohmyfood
 /support/*
+# ignore repertoire node_modules
+/node_modules/*
