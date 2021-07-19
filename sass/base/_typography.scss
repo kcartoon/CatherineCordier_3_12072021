@@ -1,15 +1,30 @@
-//Polices
+/*Polices*/
+$base-font-size: 16px!default;
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+  }
+  @function rem($size, $base: $base-font-size) {
+    @return 1rem * $size / strip-unit($base);
+}
+
+@function em($size, $base: $base-font-size) {
+    @return 1em * $size / strip-unit($base);
+}
+
 body, html {
     font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    line-height: 2;  
 }
-h1, h6 {
+h3 {
     font-family: 'Shrikhand';
+    color: white;
+
 }
 
 
-
-//Code couleur
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;

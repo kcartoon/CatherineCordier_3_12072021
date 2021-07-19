@@ -1,0 +1,47 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+// Blocks
+html,
+body,
+p,
+ol,
+ul,
+li,
+h1,
+h2
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+// Headings
+h1,
+h2
+{
+  font-size: 100%;
+  font-weight: normal;
+}
+// List
+ul {
+  list-style: none;
+}
+// Form
+button,
+input
+ {
+  margin: 0;
+}
+// Box sizing
+* {
+  box-sizing: border-box;
+}
+
+// Media
+img
+{
+  height: auto;
+  max-width: 100%;
+}
+
+
+
