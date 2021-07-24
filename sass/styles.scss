@@ -1,38 +1,32 @@
-/*base*/
-@import "./base/reset";
-@import "./base/typography";
-
-/*compoments*/
-@import "./components/btn-choice";
-@import "./components/btn-explorer";
-@import "./components/btn-heart";
-@import "./components/btn-maps";
-@import "./components/btn-new";
-
-/*layout*/
-@import "./layout/footer";
-@import "./layout/header";
-
-//pages
-@import "./pages/home";
-@import "./pages/menu";
-
-
 /*utils*/
 @import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./utils/variables";
 @import "./utils/breakpoints";
 
-//------loading spiner a venir ---
+/*base*/
+@import "./base/reset";
+@import "./base/typography";
 
-//-------main------
-//accueil
+/*compoments*/
+@import "./components/btn-heart";
+@import "./components/btn-new";
 
-i {
-    position: absolute;
-    left: 20px;
-}
+/*layout*/
+@import "./layout/footer";
+@import "./layout/header";
+
+
+/*pages*/
+@import "./pages/main";
+@import "./pages/menu";
+
+
+
+
+
+
+
 
     
 

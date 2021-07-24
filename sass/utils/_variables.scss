@@ -3,11 +3,15 @@
 $color-white:white;
 $color-black:black;
 $color-gris:#363131;
+$shadow-color: #ebd6fa;
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$light-color-primary: lighten (#9356DC,20%);
+$linear-gradient:linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
 
 /* font */
-$font-title: 'Shrikhand', sans-serif;
-$font-text: 'Roberto', sans-serif;
+$font-title: 'Shrikhand';
+$font-primary: 'Roberto', sans-serif;
+
+/* Margin */
+$margin: 15px 15px 30px 30px;

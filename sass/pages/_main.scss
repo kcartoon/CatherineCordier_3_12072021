@@ -1,0 +1,109 @@
+// main accueil
+.maps {
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        &__icon {
+        width: 15px;
+        text-align: center; 
+        }
+            &__search input {
+            width: 120px;
+            border: none;
+            outline: none;
+            background-color:#eaeaea;
+            font-size: 1rem;
+            padding: 15px 0px 15px 0px;
+            text-align: center;  
+            }  
+}
+.accueil {
+    background: #f6f6f6;
+    width: 100%;
+    
+//slogan
+  }
+.slogan {
+    text-align: center;
+        &__btn {
+            @include btn__color;
+            margin: 40px;
+         }
+button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;   
+}    
+//   action fonctionnement 
+}
+.action {
+    &__item li:hover{
+    background: $shadow-color;
+}
+    &__item li {
+    width: 80%;
+    height: 75px;
+    @include flex-config($flex: 1, $flex-direction: row, $justify-content: flex-start, $align-items:center);
+    margin: $margin;
+    border-radius: 20px;
+    background: #f6f6f6;  
+} 
+   &__icon {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #8f8d8d;
+    font: 1.5rem sans-serif;
+}
+    &__number{
+    @include number;  
+}
+}
+// Menu restaurant
+.menu_restaurant {
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+    @include desktop {
+      padding: 0 20%;
+    }
+  }    
+.card {
+    @include card;
+    @include tablet {
+      width: 40%;
+    }
+ img {
+    @include card-img ;
+}
+}
+.heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card figure {
+    @include card-figure;
+  }
+  .card figcaption {
+    @include card-figcaption;
+  }
+  .heart h4 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+
+
+
+
+
+
+      
+
+
+

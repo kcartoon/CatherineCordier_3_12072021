@@ -3,21 +3,23 @@ footer {
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
- img {       
+img {       
     height: 1.3rem;
     filter:invert(100%);
     }
-    li  {
+li  {
     list-style-type: none;        
 }
-    a {
+a {
     color: white;  
-    text-decoration: none;     
+    text-decoration: none;
+    font-size: 1.1rem;     
 }
-    i {
+i {
     margin-right: 10px;
+    
 }
-    .margin_sup {
+.margin_sup {
     margin-right: 16px;
 }
 }

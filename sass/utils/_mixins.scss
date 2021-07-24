@@ -1,0 +1,105 @@
+@mixin flex-config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
+    display: flex;
+    
+    @if $justify-content != false {
+      justify-content: $justify-content;
+    }
+    
+    @if $flex != false {
+      flex: $flex;
+    }
+    
+    @if $flex-direction != false {
+      flex-direction: $flex-direction;
+    }
+    
+    @if $align-items != false {
+      align-items: $align-items;
+    }
+  }
+
+@mixin number {
+    @include flex-config ($justify-content: center, $align-items: center);
+    background: $color-primary;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid $color-primary;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    right: 10px;
+}
+
+@mixin btn__color {
+    background:$linear-gradient;
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    width: 230px;  
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+      
+  }
+
+// card
+@mixin btn-card {
+  color: #008766;
+  background: $color-tertiary;
+  border: 5px solid $color-tertiary;
+  border-radius: 5px;
+  position: absolute;
+  right: 1%;
+  top: 5%;
+}
+@mixin card {
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px #aaa;
+  margin: 20px;
+  position: relative;
+  background: #fff;
+}
+@mixin card-img {
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+}
+@mixin card-figure {
+  margin: 0;
+}
+@mixin card-figcaption {
+  margin: 0;
+  padding: 10px;
+}
+
+
+
+// MediaQuery
+
+@mixin tablet {
+  @media screen and (min-width:map-get($breakpoints, tablet)){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width:map-get($breakpoints, desktop)){
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (min-width:map-get($breakpoints, large)){
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    @content;
+  }
+}
+

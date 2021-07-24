@@ -6,3 +6,9 @@ $medium-down: "only screen and (max-width: #{$medium})";
 $large-up: "only screen and (min-width: #{$large})";
 $large-down: "only screen and (max-width: #{$large})";
 
+$breakpoints: (
+        tablet: 768px,
+        desktop: 1280px,
+        large: 1600px,
+);
+
