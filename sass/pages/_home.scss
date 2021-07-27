@@ -20,7 +20,7 @@
     background: $color-gris-light;
     width: 100%;
     
-//slogan
+
   }
 .slogan {
   p {
@@ -40,18 +40,21 @@ button:hover {
 .action {
   h2 {
     padding: 40px 0 10px 20px;
-  }
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+    }
   p {
     font-weight: bold;
     font-size: 1.1rem;
-  }
-    &__item li:hover{
+    }
+    &__item li:hover {
     background: $shadow-color;
     .action__icon {
     color: $color-primary;
-}
-   
-}
+      }
+    }
     &__item li {
     width: 90%;
     height: 80px;
@@ -59,16 +62,23 @@ button:hover {
     margin: $margin;
     border-radius: 20px;
     background: #f6f6f6;  
-} 
+  } 
    &__icon {
     margin-left: 10px;
     margin-right: 20px;
     color: #8f8d8d;
     font-size: 1.1em;   
-}
+  }
     &__number{
     @include number;  
-}
+  }
+    &__item {
+    @include tablet {
+    display: flex;
+    align-items: center;
+  }
+  }
+
 }
 // Menus restaurant
 
@@ -78,15 +88,28 @@ button:hover {
     padding-bottom: 30px;
     h2 {
       padding-left: 15px;
-      padding-top: 45px; 
-     
-    }
-  }    
+      padding-top: 45px;  
+    } 
+    @include tablet {
+      align-items: center;  
+    } 
+  }
+.menus__cartes {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}   
 .card {
     @include card;
+    
     @include tablet {
-
-
+      width: 75%;
+    }
+    @include desktop {
+      width: 40%;
     }
  img {
     @include card-img ;

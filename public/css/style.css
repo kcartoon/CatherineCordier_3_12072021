@@ -42,7 +42,7 @@
 /*Code couleur*/
 /* font */
 /* Margin */
-/* Coeur*/
+/* MediaQuery*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -209,6 +209,12 @@ header .logo {
 .action h2 {
   padding: 40px 0 10px 20px;
 }
+@media screen and (min-width: 768px) {
+  .action h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
 .action p {
   font-weight: bold;
   font-size: 1.1rem;
@@ -250,6 +256,12 @@ header .logo {
   position: relative;
   right: 10px;
 }
+@media screen and (min-width: 768px) {
+  .action__item {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .menus_restaurant {
   background: #f2f2f2;
@@ -262,6 +274,19 @@ header .logo {
   padding-left: 15px;
   padding-top: 45px;
 }
+@media screen and (min-width: 768px) {
+  .menus_restaurant {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menus__cartes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 
 .card {
   border-radius: 20px;
@@ -269,6 +294,16 @@ header .logo {
   margin: 10px;
   position: relative;
   background: #fff;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 40%;
+  }
 }
 .card img {
   object-fit: cover;
@@ -352,7 +387,7 @@ header i {
   align-items: center;
   padding: 10px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .menu__title {
     padding: 10px 90px;
   }
@@ -372,7 +407,7 @@ header i {
 }
 
 /* Carte menu*/
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .full__menu {
     display: flex;
     justify-content: space-around;
@@ -382,7 +417,7 @@ header i {
 .starter {
   animation: fadein 3s ease-in-out;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .starter {
     width: 400px;
   }
@@ -434,7 +469,7 @@ header i {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .last__line p {
     padding-right: 20px;
   }
@@ -447,7 +482,7 @@ header i {
 .dish {
   animation: fadein 6s ease-in-out;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .dish {
     width: 400px;
   }
@@ -456,7 +491,7 @@ header i {
 .dessert {
   animation: fadein 9s ease-in-out;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .dessert {
     width: 400px;
   }
@@ -510,7 +545,7 @@ header i {
   padding: 15px;
   width: 50%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .btn__order button {
     width: 25%;
   }
