@@ -1,4 +1,4 @@
-/* Texte défilant */
+/* Texte défilant 
 .loader {
     background:-webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
     width: 100%;
@@ -15,9 +15,9 @@
     animation: defilement 10s ease-in-out 3s forwards;
   }
   .defilement {
-    overflow: hidden; /* important */
+    overflow: hidden; 
     width:80%;
-    height: 40%;  /* A ADAPTER */
+    height: 40%;  
     padding: 20px;
     border: 5px solid $color-primary;
     box-shadow: 0 .25em .5em $color-tertiary,inset 0 0 1em .25em $color-tertiary;
@@ -27,12 +27,12 @@
     text-align: center;
   }
   .defilement > div {
-    display: inline-block; /* important */
-    white-space: nowrap; /* important */
-    animation: defilement 50s infinite linear; /* défilement */
+    display: inline-block; 
+    white-space: nowrap; 
+    animation: defilement 50s infinite linear;
     cursor: pointer;
     padding: 10px 2em 10px 100%;
-  }
+  }*/
 
 
 
