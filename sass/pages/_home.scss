@@ -1,34 +1,35 @@
 // main accueil
 .maps {
-    background: #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: $color-gris-medium;
+    @include flex-config($flex: 1, $justify-content: center, $align-items:center);
         &__icon {
         width: 15px;
-        text-align: center; 
         }
             &__search input {
-            width: 120px;
+            width: 150px;
             border: none;
             outline: none;
-            background-color:#eaeaea;
+            background-color: $color-gris-medium;
             font-size: 1rem;
             padding: 15px 0px 15px 0px;
-            text-align: center;  
+            text-align: center;
+            font-weight: bold;  
             }  
 }
 .accueil {
-    background: #f6f6f6;
+    background: $color-gris-light;
     width: 100%;
     
 //slogan
   }
 .slogan {
+  p {
+    font-size: 1.1em;
+  }
     text-align: center;
         &__btn {
             @include btn__color;
-            margin: 40px;
+            margin: 20px 0 50px;
          }
 button:hover {
     transform: scale(1.1);
@@ -37,12 +38,23 @@ button:hover {
 //   action fonctionnement 
 }
 .action {
+  h2 {
+    padding: 40px 0 10px 20px;
+  }
+  p {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
     &__item li:hover{
     background: $shadow-color;
+    .action__icon {
+    color: $color-primary;
+}
+   
 }
     &__item li {
-    width: 80%;
-    height: 75px;
+    width: 90%;
+    height: 80px;
     @include flex-config($flex: 1, $flex-direction: row, $justify-content: flex-start, $align-items:center);
     margin: $margin;
     border-radius: 20px;
@@ -52,39 +64,45 @@ button:hover {
     margin-left: 10px;
     margin-right: 20px;
     color: #8f8d8d;
-    font: 1.5rem sans-serif;
+    font-size: 1.1em;   
 }
     &__number{
     @include number;  
 }
 }
-// Menu restaurant
-.menu_restaurant {
+// Menus restaurant
+
+.menus_restaurant {
     background: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      flex-flow: row wrap;
-    }
-    @include desktop {
-      padding: 0 20%;
+    @include flex-config($flex:1, $flex-direction: column);
+    padding-bottom: 30px;
+    h2 {
+      padding-left: 15px;
+      padding-top: 45px; 
+     
     }
   }    
 .card {
     @include card;
     @include tablet {
-      width: 40%;
+
+
     }
  img {
     @include card-img ;
 }
+.new {
+  @include btn-card;
 }
-.heart {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+.carte {
+  @include flex-config($flex:1, $justify-content:space-between, $align-items:center);
+    .heart {
+     @include heart;
+    }
+    .heart:hover {
+      @include heart-color;
+    }
   }
   .card figure {
     @include card-figure;
@@ -92,10 +110,7 @@ button:hover {
   .card figcaption {
     @include card-figcaption;
   }
-  .heart h4 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
+
 
 
 

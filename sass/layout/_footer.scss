@@ -1,5 +1,5 @@
 footer {
-    background-color: #363131;
+    background-color: $color-gris;
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -11,13 +11,11 @@ li  {
     list-style-type: none;        
 }
 a {
-    color: white;  
-    text-decoration: none;
-    font-size: 1.1rem;     
+    color: $color-white;  
+    text-decoration: none;         
 }
 i {
-    margin-right: 10px;
-    
+    margin-right: 10px;    
 }
 .margin_sup {
     margin-right: 16px;

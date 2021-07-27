@@ -1,3 +1,42 @@
+/* Texte défilant */
+.loader {
+    background:-webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: defilement 10s ease-in-out 3s forwards;
+  }
+  .defilement {
+    overflow: hidden; /* important */
+    width:80%;
+    height: 40%;  /* A ADAPTER */
+    padding: 20px;
+    border: 5px solid $color-primary;
+    box-shadow: 0 .25em .5em $color-tertiary,inset 0 0 1em .25em $color-tertiary;
+  }
+  .defilement p{
+    font-family: 'Shrikhand';
+    text-align: center;
+  }
+  .defilement > div {
+    display: inline-block; /* important */
+    white-space: nowrap; /* important */
+    animation: defilement 50s infinite linear; /* défilement */
+    cursor: pointer;
+    padding: 10px 2em 10px 100%;
+  }
+
+
+
+
 header {
     width: 100%;
     margin-top: 20px;

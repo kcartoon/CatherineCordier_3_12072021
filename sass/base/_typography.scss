@@ -18,23 +18,34 @@ $base-font-size: 16px!default;
 
 body, html {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.6rem;  
 }
 
 h1, h2{
   font-weight: 900;
-  font-size: 1.8rem;
-  padding: 40px;
+  font-size: 1.6rem;
+  padding: 20px 40px;
 }
 
-figcaption, h3 {
+figcaption, p{
   font-family: 'Roboto';
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 300;
 }
-p {
-  font-size: 1.2rem;
-  font-weight: 600;
+h3 {
+  font-family: 'Roboto';
+  font-size: 1em;
+  font-weight: 700;
 }
+h4 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+p {
+  font-size: 0.9em;
+}
+
 

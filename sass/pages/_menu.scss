@@ -1,8 +1,110 @@
-/*Header Menu*/
+/*Header logo idem home +fleche retour Menu*/
 header 
 i {
     position: absolute;
     left: 20px;
+}
+/*Main*/
+  /* Menu*/
+  .header__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+  /* Titre Menu*/
+  .main__menu {
+    @include main-menu;
+  }
+  .menu__title {
+    @include menu-title;
+    @include desktop {
+      padding: 10px 90px;
+}
+    .heart {
+      @include heart;
+  }
+    .heart:hover {
+    @include heart-color;
+  }
+  }
+
+/* Carte menu*/
+  .full__menu {
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .starter {
+    animation: fadein 3s ease-in-out;
+    @include desktop {
+      width: 400px;
+    }
+  }
+  .starter h4, .dish h4, .dessert h4 {
+    padding-left: 15px;
+    margin-bottom: 5px;
+  }
+  .meals {
+    @include meals;
+  }
+  .meals h4 {
+    margin: 0;
+  }
+  .last__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5em;
+  }
+  .last__line p {
+    margin-right: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include desktop {
+      padding-right: 20px;
+    }
+  }
+  .last__line span {
+    margin-right: 10px;
+  }
+  .dish {
+    animation: fadein 6s ease-in-out;
+    @include desktop {
+      width: 400px;
+    }
+  }
+  .dessert {
+    animation: fadein 9s ease-in-out;
+    @include desktop {
+      width: 400px;
+    }
+  }
+  .cross {
+    @include cross;
+  }
+  .line {
+    width: 40px;
+    border: 2px solid $color-tertiary;
+    margin-left: 15px;
+  }
+  .btn__order {
+    display: flex;
+    justify-content: center;
+}
+.btn__order button {
+  @include btn__color;
+  margin: 40px 0;
+  padding: 15px;
+  width: 50%;
+  @include desktop {
+    width: 25%;
+  }
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;   
+  }
 }
 
     
