@@ -10,7 +10,7 @@
     opacity: 0;
   }
 }
-@keyframes slidein {
+@keyframes slide-in {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }

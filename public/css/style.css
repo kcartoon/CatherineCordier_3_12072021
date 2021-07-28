@@ -10,7 +10,7 @@
     opacity: 0;
   }
 }
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: scaleX(0);
   }
@@ -142,8 +142,8 @@ p {
   margin: 30px;
 }
 .defilement .logo1 img {
-  animation-duration: 750ms slidein;
-  animation: 3s linear 2s slidein;
+  animation-duration: 750ms;
+  animation: 3s linear 2s slide-in;
   position: relative;
   width: 40%;
   opacity: 0.6;
