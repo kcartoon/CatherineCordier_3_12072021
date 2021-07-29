@@ -108,6 +108,10 @@ p {
   font-size: 0.9em;
 }
 
+.num {
+  font-weight: bold;
+}
+
 .loader {
   background: -webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
   width: 100%;
