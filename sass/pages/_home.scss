@@ -19,24 +19,23 @@
 .accueil {
     background: $color-gris-light;
     width: 100%;
-    
-
   }
 .slogan {
   p {
     font-size: 1.1em;
   }
-    text-align: center;
+  text-align: center;
         &__btn {
             @include btn__color;
             margin: 20px 0 50px;
          }
 button:hover {
-    transform: scale(1.1);
-    opacity: 1;   
+    opacity: 0.8;
+    transform: scale(1);
+    @include darker-shadow;
 }    
-//   action fonctionnement 
 }
+//   action fonctionnement 
 .action {
   h2 {
     padding: 40px 0 10px 20px;
@@ -80,8 +79,8 @@ button:hover {
   }
 
 }
-// Menus restaurant
 
+// Menus restaurant
 .menus_restaurant {
     background: #f2f2f2;
     @include flex-config($flex:1, $flex-direction: column);
@@ -100,7 +99,6 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
 }   
 .card {
     @include card;

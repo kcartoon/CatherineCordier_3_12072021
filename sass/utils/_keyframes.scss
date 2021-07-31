@@ -24,6 +24,10 @@
     transform: translate(-100%);
   }
 }
+// card new
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
 //Décalage ouverture sur page menu
 @keyframes fadein {
   from {
@@ -33,7 +37,7 @@
     opacity:1;
   }
 }
- // Colorartion coeur
+ // Coloration coeur
 @keyframes heart {
     0% {
       opacity: 0;

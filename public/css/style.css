@@ -28,6 +28,11 @@
     transform: translate(-100%);
   }
 }
+@keyframes clignote {
+  50% {
+    opacity: 0;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -113,7 +118,7 @@ p {
 }
 
 .loader {
-  background: -webkit-linear-gradient(#FFFFFF, #99E2D0, #FF79DA, #9356DC);
+  background: #f6f6f6;
   width: 100%;
   height: 100%;
   line-height: 100%;
@@ -123,42 +128,32 @@ p {
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: defilement 4s ease-in-out 3s forwards;
+  animation: defilement 3s ease-in-out 2s forwards;
+  opacity: 1;
+  /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
+  filter: alpha(opacity=1);
+  /* for <= IE 8 */
 }
 
 /* Animation Texte défilant */
 .defilement {
-  display: block;
-  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
   text-align: center;
-  overflow: hidden;
-  /* important évite débordement*/
+  margin-top: 100px;
+  position: relative;
 }
-.defilement p {
-  display: inline-block;
-  /* important */
-  animation: defilement 10s;
-  white-space: nowrap;
-  /* important */
-  font-family: "Shrikhand";
-  font-size: large;
+.defilement .slogan1 {
   line-height: 4rem;
-  margin: 30px;
+  font-family: "Shrikhand";
+  color: #9356DC;
+  font-size: large;
+  margin: 70px 0 30px 0;
 }
 .defilement .logo1 img {
-  animation-duration: 750ms;
-  animation: 3s linear 2s slide-in;
-  position: relative;
-  width: 40%;
-  opacity: 0.6;
-  /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-  filter: alpha(opacity=0.6);
-  /* for <= IE 8 */
-}
-@media screen and (min-width: 768px) {
-  .defilement {
-    width: 40%;
-  }
+  width: 50%;
 }
 
 header {
@@ -209,18 +204,20 @@ header .logo {
   background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   border-radius: 30px;
   color: white;
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 40px;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  box-shadow: 4px 4px 6px #332f2f;
   margin: 20px 0 50px;
 }
 .slogan button:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  opacity: 0.8;
+  transform: scale(1);
+  box-shadow: 1px 1px 6px black;
 }
 
 .action h2 {
@@ -342,6 +339,7 @@ header .logo {
   font-size: 14px;
   width: 25%;
   text-align: center;
+  animation: clignote 2s linear infinite;
 }
 
 .carte {
@@ -396,7 +394,7 @@ header i {
   margin-top: -50px;
 }
 
-.menu__title {
+.menus__title {
   font-family: Shrikhand, sans-serif;
   display: flex;
   justify-content: space-between;
@@ -405,15 +403,15 @@ header i {
   padding: 10px;
 }
 @media screen and (min-width: 1024px) {
-  .menu__title {
+  .menus__title {
     padding: 10px 90px;
   }
 }
-.menu__title .heart {
+.menus__title .heart {
   color: #686565;
   font-size: 1.6rem;
 }
-.menu__title .heart:hover {
+.menus__title .heart:hover {
   cursor: pointer;
   animation: heart 2s ease-out;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -431,16 +429,29 @@ header i {
   }
 }
 
-.starter {
+.menu {
   animation: fadein 3s ease-in-out;
 }
 @media screen and (min-width: 1024px) {
-  .starter {
+  .menu {
     width: 400px;
   }
 }
+.menu__title {
+  margin-bottom: 25px;
+}
+.menu__title ::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+  animation: progress 2s;
+  animation-fill-mode: both;
+}
 
-.starter h4, .dish h4, .dessert h4 {
+.menu h4 {
   padding-left: 15px;
   margin-bottom: 5px;
 }
@@ -469,10 +480,6 @@ header i {
   transform: rotate(360deg);
 }
 
-.meals h4 {
-  margin: 0;
-}
-
 .last__line {
   display: flex;
   justify-content: space-between;
@@ -494,24 +501,6 @@ header i {
 
 .last__line span {
   margin-right: 10px;
-}
-
-.dish {
-  animation: fadein 6s ease-in-out;
-}
-@media screen and (min-width: 1024px) {
-  .dish {
-    width: 400px;
-  }
-}
-
-.dessert {
-  animation: fadein 9s ease-in-out;
-}
-@media screen and (min-width: 1024px) {
-  .dessert {
-    width: 400px;
-  }
 }
 
 .cross {
@@ -536,12 +525,6 @@ header i {
   transition: transform 500ms ease-in-out;
 }
 
-.line {
-  width: 40px;
-  border: 2px solid #99E2D0;
-  margin-left: 15px;
-}
-
 .btn__order {
   display: flex;
   justify-content: center;
@@ -551,16 +534,17 @@ header i {
   background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
   border-radius: 30px;
   color: white;
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 40px;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  box-shadow: 4px 4px 6px #332f2f;
+  text-align: center;
   margin: 40px 0;
-  padding: 15px;
-  width: 50%;
+  width: 40%;
 }
 @media screen and (min-width: 1024px) {
   .btn__order button {
@@ -568,7 +552,6 @@ header i {
   }
 }
 .btn__order button:hover {
-  transform: scale(1.1);
   opacity: 0.8;
 }
 

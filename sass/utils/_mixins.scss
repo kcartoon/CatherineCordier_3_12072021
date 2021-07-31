@@ -35,14 +35,18 @@
     background:$linear-gradient;
     border-radius: 30px;
     color: white;
-    width: 200px;
-    height: 50px;  
+    width: 180px;
+    height: 40px;  
     border:none;
     outline: none;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;   
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 4px 4px 6px $color-gris;   
   }
+@mixin darker-shadow{
+    box-shadow: 1px 1px 6px black;
+}
 // Heart non sectionnner
 @mixin heart {
   color: rgb(104, 101, 101);
@@ -72,6 +76,7 @@
   font-size: 14px;
   width: 25%;
   text-align: center;
+  animation: clignote 2s linear infinite;
 }
 @mixin card {
   border-radius: 20px;
@@ -96,7 +101,19 @@
   
 } 
 // Pages Menus
-
+@mixin after {
+  margin-bottom: 25px;
+  ::after {
+      content: "";
+      display: block;
+      margin-top: 5px;
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $color-tertiary;
+      animation: progress 2s;
+      animation-fill-mode: both;    
+}
+}
 @mixin main-menu {
   background-color: #f6f6f6;
   border-top-left-radius: 25px;
@@ -105,7 +122,7 @@
   position: relative;
   margin-top: -50px;
 }
-@mixin menu-title {
+@mixin title {
   font-family: Shrikhand, sans-serif;
   @include flex-config ($flex: 1, $justify-content: space-between, $align-items: center);
   padding: 10px;
