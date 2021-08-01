@@ -127,7 +127,7 @@ p {
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: defilement 3s ease-in-out 2s forwards;
+  animation: loader 3s ease-in-out 2s forwards;
   opacity: 1;
   /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
   filter: alpha(opacity=1);
