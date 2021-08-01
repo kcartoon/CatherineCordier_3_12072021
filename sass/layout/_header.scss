@@ -8,16 +8,17 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    animation: loader 3s ease-in-out 2s forwards;
-    opacity: 1; /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-    filter:alpha(opacity=1); /* for <= IE 8 */ 
+    animation: loader 2s ease-in-out 2s forwards;
   }
-  /* Animation Texte défilant */
+  /* Animation */
 .defilement {
     @include flex-config ($flex: 2, $align-items: center, $justify-content: center);
     text-align: center;
     margin-top: 100px;
-    position: relative;   
+    position: relative;
+  .logo1 img{
+      width: 50%; 
+  }    
   .slogan1 {
     border-radius: 10px;
     background:$color-primary;
@@ -29,10 +30,7 @@
     padding-left: 20px;
     padding-right: 20px;
   } 
-  .logo1 img{
-    width: 50%; 
-  }
-  }
+}
 
 // Page du site
 header {

@@ -1,6 +1,6 @@
 // Flexbox
 @mixin flex-config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
-    display: flex;
+  display: flex;
     
     @if $justify-content != false {
       justify-content: $justify-content;
@@ -17,7 +17,7 @@
     @if $align-items != false {
       align-items: $align-items;
     }
-  }
+}
 // Section action fonctionnement
 @mixin number {
     @include flex-config ($justify-content: center, $align-items: center);
@@ -43,7 +43,7 @@
     font-size: 0.8rem;
     font-weight: 500;
     box-shadow: 4px 4px 6px $color-gris;   
-  }
+}
 @mixin darker-shadow{
     box-shadow: 1px 1px 6px black;
 }
@@ -97,8 +97,7 @@
   margin: 0px;
 }
 @mixin card-figcaption {
-  padding: 10px 15px 15px 15px;
-  
+  padding: 10px 15px 15px 15px; 
 } 
 // Pages Menus
 @mixin after {
@@ -112,7 +111,7 @@
       background-color: $color-tertiary;
       animation: progress 2s;
       animation-fill-mode: both;    
-}
+  }
 }
 @mixin main-menu {
   background-color: #f6f6f6;

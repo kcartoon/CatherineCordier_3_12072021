@@ -1,22 +1,22 @@
 // MediaQuery
 @mixin tablet {
-        @media screen and (min-width:map-get($breakpoints, tablet)){
+  @media screen and (min-width:map-get($breakpoints, tablet)){
           @content;
-        }
-      }
+  }
+}
 @mixin desktop {
-        @media screen and (min-width:map-get($breakpoints, desktop)){
+  @media screen and (min-width:map-get($breakpoints, desktop)){
           @content;
-        }
-      }
+  }
+}
 @mixin large {
-        @media screen and (min-width:map-get($breakpoints, large)){
+  @media screen and (min-width:map-get($breakpoints, large)){
           @content;
-        }
-      }
+  }
+}
       
 @mixin medium-screen {
-        @media screen and (min-width: map-get($breakpoints, medium)) {
+  @media screen and (min-width: map-get($breakpoints, medium)) {
           @content;
-        }
-      }
+  }
+}
