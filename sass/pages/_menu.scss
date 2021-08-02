@@ -93,7 +93,9 @@ i {
     width: 25%;
   }
   &:hover {
-    opacity: 0.8;   
+    background-color: lighten(#9356dc, 10%);
+    background-blend-mode: lighten;
+    @include darker-shadow; 
   }
 }
 

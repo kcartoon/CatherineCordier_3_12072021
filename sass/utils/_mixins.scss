@@ -33,6 +33,7 @@
 //btn Explorer et commander
 @mixin btn__color {
     background:$linear-gradient;
+    border: 1px solid transparent;
     border-radius: 30px;
     color: white;
     width: 180px;
@@ -45,7 +46,7 @@
     box-shadow: 4px 4px 6px $color-gris;   
 }
 @mixin darker-shadow{
-    box-shadow: 1px 1px 6px black;
+  box-shadow: 4px 4px 6px #000;
 }
 // Heart non sectionnner
 @mixin heart {
