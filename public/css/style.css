@@ -1,9 +1,20 @@
+@charset "UTF-8";
 @keyframes loader {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes defilement-rtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+    /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    /* position finale à gauche */
   }
 }
 @keyframes clignote {
@@ -131,7 +142,7 @@ p {
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: loader 3s ease-in-out 2s forwards;
+  animation: loader 4s ease-in-out 2s forwards;
 }
 .loader .logo1 {
   margin-top: 100px;
@@ -155,6 +166,7 @@ p {
   font-size: 1rem;
   margin-top: 50px;
   padding: 20px;
+  animation: defilement-rtl 3s infinite linear;
 }
 
 /* Animation */

@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    animation: loader 3s ease-in-out 2s forwards;
+    animation: loader 4s ease-in-out 2s forwards;
     .logo1 {
         margin-top: 100px;
         display: flex;
@@ -33,6 +33,7 @@
         font-size: 1rem;
         margin-top: 50px;
         padding: 20px;
+        animation: defilement-rtl 3s infinite linear;
     }
 }
 
