@@ -12,15 +12,15 @@ $color-tertiary: #99E2D0;
 $linear-gradient:linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
 
 /* font */
+
 $font-title: 'Shrikhand';
-$font-primary: 'Roboto', sans-serif;
+$font-primary: 'Roboto',
+sans-serif;
 
 /* Margin */
+
 $margin: 25px;
 
- /* MediaQuery*/
- $breakpoints: (
-        tablet: 768px,
-        desktop: 1024px,
-        large: 1400px,
-);
+/* MediaQuery*/
+
+$breakpoints: ( tablet: 768px, desktop: 1024px, large: 1400px, );

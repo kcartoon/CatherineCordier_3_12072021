@@ -3,22 +3,24 @@ footer {
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    img {       
-    height: 1.3rem;
-    filter:invert(100%);
+    img {
+        height: 1.3rem;
+        filter: invert(100%);
     }
-    li  {
-    list-style-type: none;        
+    ul {
+        margin: 20px auto;
+    }
+    li {
+        list-style-type: none;
     }
     a {
-    color: $color-white;  
-    text-decoration: none;         
+        color: $color-white;
+        text-decoration: none;
     }
     i {
-    margin-right: 10px;    
+        margin-right: 10px;
     }
     .margin_sup {
-    margin-right: 16px;
+        margin-right: 16px;
     }
 }
-

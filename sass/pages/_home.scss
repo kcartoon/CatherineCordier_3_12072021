@@ -1,149 +1,147 @@
-// main accueil
-.maps {
-  background: $color-gris-medium;
-  @include flex-config($flex: 1, $justify-content: center, $align-items:center);
-      &__icon {
-        width: 15px;
-      }
-      &__search input {
-            width: 150px;
-            border: none;
-            outline: none;
-            background-color: $color-gris-medium;
-            font-size: 1rem;
-            padding: 15px 0px 15px 0px;
+        // main accueil
+        .maps {
+            background: $color-gris-medium;
+            @include flex-config($flex: 1, $justify-content: center, $align-items: center);
+            &__icon {
+                width: 15px;
+            }
+            &__search input {
+                width: 150px;
+                border: none;
+                outline: none;
+                background-color: $color-gris-medium;
+                font-size: 1rem;
+                padding: 15px 0px 15px 0px;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+        
+        .accueil {
+            background: $color-gris-light;
+            width: 100%;
+        }
+        
+        .slogan {
+            p {
+                font-size: 1.1em;
+            }
             text-align: center;
-            font-weight: bold;  
-      }  
-}
-.accueil {
-    background: $color-gris-light;
-    width: 100%;
-}
-.slogan {
-  p {
-    font-size: 1.1em;
-  }
-  text-align: center;
-    &__btn {
-      @include btn__color;
-      margin: 20px 0 50px;
-    }
-  button:hover {
-    background-color: lighten(#9356dc, 10%);
-    background-blend-mode: lighten;
-    @include darker-shadow;
-  }    
-}
-//   action fonctionnement 
-.action {
-  h2 {
-  padding: 40px 0 10px 20px;
-    @include tablet {
-    display: flex;
-    justify-content: center;
-    }
-  }
-  p {
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  &__item li:hover {
-    background: $shadow-color;
-      .action__icon {
-    color: $color-primary;
-    }
-  }
-  &__item li {
-    width: 90%;
-    height: 80px;
-    @include flex-config($flex: 1, $flex-direction: row, $justify-content: flex-start, $align-items:center);
-    margin: $margin;
-    border-radius: 20px;
-    background: #f6f6f6;  
-  } 
-  &__icon {
-    margin-left: 10px;
-    margin-right: 20px;
-    color: #8f8d8d;
-    font-size: 1.1em;   
-  }
-  &__number{
-    @include number;  
-  }
-  &__item {
-    @include tablet {
-    display: flex;
-    align-items: center;
-    }
-  }
-}
-
-// Menus restaurant
-.menus_restaurant {
-  background: #f2f2f2;
-  @include flex-config($flex:1, $flex-direction: column);
-  padding-bottom: 30px;
-    h2 {
-      padding-left: 15px;
-      padding-top: 45px;  
-    } 
-    @include tablet {
-    align-items: center;  
-    } 
-}
-.menus__cartes {
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  @include desktop {
-    width: 90%;
-  }
-}   
-.card {
-  @include card;
-  @include tablet {
-      width: 75%;
-  }
-  @include desktop {
-      width: 40%;
-      padding: 0;
-      margin: 10px;
-  }
-
-  img {
-    @include card-img ;
-  }
-  .new {
-  @include btn-card;
-  }
-}
-.carte {
-  @include flex-config($flex:1, $justify-content:space-between, $align-items:center);
-  .heart {
-  @include heart;
-  }
-  .heart:hover {
-  @include heart-color;
-  }
-}
-.card figure {
-  @include card-figure;
-}
-.card figcaption {
-  @include card-figcaption;
-}
-
-
-
-
-
-
-
-
-      
-
-
-
+            &__btn {
+                @include btn__color;
+                margin: 20px 0 50px;
+            }
+            button:hover {
+                background-color: lighten(#9356dc, 10%);
+                background-blend-mode: lighten;
+                @include darker-shadow;
+            }
+        }
+        
+        //   action fonctionnement 
+        .action {
+            h2 {
+                padding: 40px 0 10px 20px;
+                @include tablet {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            ul {
+                margin: 20px auto;
+            }
+            p {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+            &__item li:hover {
+                background: $shadow-color;
+                .action__icon {
+                    color: $color-primary;
+                }
+            }
+            &__item li {
+                width: 90%;
+                height: 80px;
+                @include flex-config($flex: 1, $flex-direction: row, $justify-content: flex-start, $align-items: center);
+                margin: $margin;
+                border-radius: 20px;
+                background: #f6f6f6;
+            }
+            &__icon {
+                margin-left: 10px;
+                margin-right: 20px;
+                color: #8f8d8d;
+                font-size: 1.1em;
+            }
+            &__number {
+                @include number;
+            }
+            &__item {
+                @include tablet {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        
+        // Menus restaurant
+        .menus_restaurant {
+            background: #f2f2f2;
+            @include flex-config($flex: 1, $flex-direction: column);
+            padding-bottom: 30px;
+            h2 {
+                padding-left: 15px;
+                padding-top: 45px;
+            }
+            @include tablet {
+                align-items: center;
+            }
+        }
+        
+        .menus__cartes {
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            @include desktop {
+                width: 90%;
+            }
+        }
+        
+        .card {
+            @include card;
+            @include tablet {
+                width: 75%;
+            }
+            @include desktop {
+                max-width: 40%;
+                padding: 0;
+                margin: 10px;
+            }
+            img {
+                @include card-img;
+            }
+            .new {
+                @include btn-card;
+            }
+        }
+        
+        .carte {
+            @include flex-config($flex: 1, $justify-content: space-between, $align-items: center);
+            .heart {
+                @include heart;
+            }
+            .heart:hover {
+                @include heart-color;
+            }
+        }
+        
+        .card figure {
+            @include card-figure;
+        }
+        
+        .card figcaption {
+            @include card-figcaption;
+        }

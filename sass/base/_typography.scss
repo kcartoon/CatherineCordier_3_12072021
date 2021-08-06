@@ -1,52 +1,43 @@
 /*Polices*/
-$base-font-size: 16px!default;
-@function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
-    }
-  
-    @return $number;
-  }
-  @function rem($size, $base: $base-font-size) {
-    @return 1rem * $size / strip-unit($base);
-}
 
-@function em($size, $base: $base-font-size) {
-    @return 1em * $size / strip-unit($base);
-}
-
-body, html {
+body,
+html {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    line-height: 1.6rem;  
+    line-height: 1.6rem;
 }
 
-h1, h2{
-  font-weight: 900;
-  font-size: 1.6rem;
-  padding: 20px 40px;
+h1,
+h2 {
+    font-weight: 900;
+    font-size: 1.6rem;
+    padding: 20px 40px;
 }
 
-figcaption, p{
-  font-family: 'Roboto';
-  font-size: 1.2em;
-  font-weight: 300;
-}
-h3 {
-  font-family: 'Roboto';
-  font-size: 1em;
-  font-weight: 700;
-}
-h4 {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 1em;
-  text-transform: uppercase;
-}
+figcaption,
 p {
-  font-size: 0.9em;
-}
-.num {
-  font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
+h3 {
+    font-family: 'Roboto';
+    font-size: 1em;
+    font-weight: 700;
+}
+
+h4 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+.num {
+    font-weight: bold;
+}

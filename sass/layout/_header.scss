@@ -1,36 +1,43 @@
 //Accueil
-.loader {  
+.loader {
+    @include flex-config ($flex: 2, $flex-direction: column, $align-items: center, $justify-content: center);
     background: $color-gris-light;
     width: 100%;
     height: 100%;
-    position: fixed; /*page site en arriere plan*/
+    position: fixed;
+    /*page site en arriere plan*/
     z-index: 9999;
     top: 0;
     left: 0;
     pointer-events: none;
-    animation: loader 2s ease-in-out 2s forwards;
-  }
-  /* Animation */
-.defilement {
-    @include flex-config ($flex: 2, $align-items: center, $justify-content: center);
-    text-align: center;
-    margin-top: 100px;
-    position: relative;
-  .logo1 img{
-      width: 50%; 
-  }    
-  .slogan1 {
-    border-radius: 10px;
-    background:$color-primary;
-    line-height: 4rem;
-    font-family: 'Shrikhand';
-    color: $color-white;
-    font-size: 1rem; 
-    margin: 70px 0 70px 0;
-    padding-left: 20px;
-    padding-right: 20px;
-  } 
+    animation: loader 3s ease-in-out 2s forwards;
+    .logo1 {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            max-width: 200px;
+            position: absolute;
+            animation: rotate 1s linear infinite;
+        }
+    }
+    .slogan1 {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        background: $color-primary;
+        line-height: 4rem;
+        font-family: 'Shrikhand';
+        color: $color-white;
+        font-size: 1rem;
+        margin-top: 50px;
+        padding: 20px;
+    }
 }
+
+
+/* Animation */
 
 // Page du site
 header {
@@ -39,8 +46,8 @@ header {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;    
-.logo {   
-    height: 1.9rem;
-  }
+    align-items: center;
+    .logo {
+        height: 1.9rem;
+    }
 }
