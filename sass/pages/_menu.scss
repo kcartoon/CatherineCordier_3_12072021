@@ -2,14 +2,12 @@
 
 header i {
     position: absolute;
-    left: 20px;
+    left: 1rem;
+    margin-top: -5px;
 }
 
 
 /*Main*/
-
-
-/* Menu*/
 
 .header__img img {
     object-fit: cover;
@@ -22,9 +20,6 @@ header i {
 
 .menus__title {
     @include title;
-    @include desktop {
-        padding: 10px 90px;
-    }
     .heart {
         @include heart;
     }
@@ -41,48 +36,56 @@ header i {
 }
 
 .full__menu {
-    @include desktop {
+    @include laptop {
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 }
 
 .menu {
-    animation: fadein 0.5s ease-in-out;
-    @include desktop;
     &__title {
         @include after;
     }
 }
 
-.entree {
-    animation: fadein 1s ease-in-out;
-    @include desktop {
-        width: 400px;
-    }
-}
-
-.plats {
-    animation: fadein 2s ease-in-out;
-    @include desktop {
-        width: 400px;
-    }
-}
-
-.dessert {
-    animation: fadein 3s ease-in-out;
-    @include desktop {
-        width: 400px;
-    }
-}
-
-.menu h4 {
-    padding-left: 15px;
-    margin-bottom: 5px;
-}
-
 .meals {
+    h4 {
+        font-family: 'Roboto';
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
     @include meals;
+    @include laptop {
+        width: 300px;
+    }
+}
+
+.delay1 {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.delay2 {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.delay3 {
+    animation: fadeInUp 3s ease-in-out;
+}
+
+.delay4 {
+    animation: fadeInUp 4s ease-in-out;
+}
+
+.full__menu {
+    h3 {
+        text-transform: uppercase;
+        font-weight: lighter;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
 }
 
 .cross {
@@ -93,7 +96,7 @@ header i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 1.5em;
+    line-height: 1.2em;
 }
 
 .last__line p {
@@ -107,16 +110,15 @@ header i {
 }
 
 .last__line span {
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .btn__order button {
     @include btn__color;
     text-align: center;
     margin: 30px 0;
-    width: 50%;
     @include desktop {
-        width: 25%;
+        max-width: 200px;
     }
     &:hover {
         background-color: lighten(#9356dc, 10%);

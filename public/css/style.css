@@ -30,6 +30,16 @@
     opacity: 1;
   }
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes grow {
   0%, 100% {
     -webkit-transform: scaleY(1);
@@ -42,10 +52,10 @@
 }
 @keyframes rotate {
   from {
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(360deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(0deg);
   }
 }
 @keyframes heart {
@@ -90,13 +100,19 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6rem;
+  font-weight: 400;
 }
 
-h1,
-h2 {
+h1 {
   font-weight: 900;
   font-size: 1.6rem;
   padding: 20px 40px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 20px 20px;
 }
 
 figcaption,
@@ -108,19 +124,12 @@ p {
 
 h3 {
   font-family: "Roboto";
-  font-size: 1em;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
-h4 {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 1em;
-  text-transform: uppercase;
-}
-
 p {
-  font-size: 0.9em;
+  font-size: 1.2rem;
 }
 
 .num {
@@ -142,10 +151,10 @@ p {
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: loader 4s ease-in-out 2s forwards;
+  animation: defilement-rtl 3s ease-in-out 2s forwards;
 }
 .loader .logo1 {
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -153,23 +162,23 @@ p {
 .loader .logo1 img {
   max-width: 200px;
   position: absolute;
-  animation: rotate 1s linear infinite;
+  animation: rotate 1.5s linear;
 }
 .loader .slogan1 {
   display: flex;
   justify-content: center;
+  text-align: center;
+  max-height: 100vh;
   border-radius: 10px;
   background: #9356DC;
-  line-height: 4rem;
+  line-height: 3rem;
   font-family: "Shrikhand";
   color: white;
   font-size: 1rem;
   margin-top: 50px;
   padding: 20px;
-  animation: defilement-rtl 3s infinite linear;
 }
 
-/* Animation */
 header {
   width: 100%;
   margin-top: 20px;
@@ -219,12 +228,11 @@ header .logo {
   border: 1px solid transparent;
   border-radius: 30px;
   color: white;
-  width: 180px;
-  height: 40px;
+  width: 220px;
+  height: 50px;
+  font-size: 1.1rem;
   border: none;
-  outline: none;
   cursor: pointer;
-  font-size: 0.8rem;
   font-weight: 500;
   box-shadow: 4px 4px 6px #332f2f;
   margin: 20px 0 50px;
@@ -240,12 +248,17 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .action h2 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 }
 .action ul {
   margin: 20px auto;
+}
+@media screen and (min-width: 1400px) {
+  .action ul {
+    justify-content: space-between;
+    max-width: 1400px;
+  }
 }
 .action p {
   font-weight: bold;
@@ -303,8 +316,10 @@ header .logo {
   padding-bottom: 30px;
 }
 .menus_restaurant h2 {
-  padding-left: 15px;
   padding-top: 45px;
+}
+.menus_restaurant p {
+  font-size: 1.1rem;
 }
 @media screen and (min-width: 768px) {
   .menus_restaurant {
@@ -319,9 +334,10 @@ header .logo {
     justify-content: space-around;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1900px) {
   .menus__cartes {
-    width: 90%;
+    flex-wrap: wrap;
+    max-width: 1400px;
   }
 }
 
@@ -334,14 +350,19 @@ header .logo {
 }
 @media screen and (min-width: 768px) {
   .card {
-    width: 75%;
+    width: 75vw;
   }
 }
 @media screen and (min-width: 1024px) {
   .card {
-    max-width: 40%;
+    max-width: 45vw;
     padding: 0;
     margin: 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card {
+    max-width: 640px;
   }
 }
 .card img {
@@ -388,6 +409,7 @@ header .logo {
 }
 
 .card figure {
+  width: 100%;
   margin: 0px;
 }
 
@@ -398,11 +420,11 @@ header .logo {
 /*Header logo idem home +fleche retour Menu*/
 header i {
   position: absolute;
-  left: 20px;
+  left: 1rem;
+  margin-top: -5px;
 }
 
 /*Main*/
-/* Menu*/
 .header__img img {
   object-fit: cover;
   width: 100%;
@@ -412,15 +434,17 @@ header i {
 /* Titre Menu*/
 .menus__title {
   font-family: Shrikhand, sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
   display: flex;
   justify-content: space-between;
   flex: 1;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px 10px 0;
 }
 @media screen and (min-width: 1024px) {
   .menus__title {
-    padding: 10px 90px;
+    justify-content: center;
   }
 }
 .menus__title .heart {
@@ -451,14 +475,12 @@ header i {
   .full__menu {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 }
 
-.menu {
-  animation: fadein 0.5s ease-in-out;
-}
 .menu__title {
-  margin-bottom: 25px;
+  margin-top: 20px;
 }
 .menu__title ::after {
   content: "";
@@ -469,38 +491,6 @@ header i {
   background-color: #99E2D0;
   animation: progress 2s;
   animation-fill-mode: both;
-}
-
-.entree {
-  animation: fadein 1s ease-in-out;
-}
-@media screen and (min-width: 1024px) {
-  .entree {
-    width: 400px;
-  }
-}
-
-.plats {
-  animation: fadein 2s ease-in-out;
-}
-@media screen and (min-width: 1024px) {
-  .plats {
-    width: 400px;
-  }
-}
-
-.dessert {
-  animation: fadein 3s ease-in-out;
-}
-@media screen and (min-width: 1024px) {
-  .dessert {
-    width: 400px;
-  }
-}
-
-.menu h4 {
-  padding-left: 15px;
-  margin-bottom: 5px;
 }
 
 .meals {
@@ -516,6 +506,13 @@ header i {
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
+.meals h4 {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
+.meals p {
+  font-size: 0.8rem;
+}
 .meals:hover {
   padding-right: 75px;
 }
@@ -524,7 +521,35 @@ header i {
   transform: translate(-50px);
 }
 .meals:hover .fa-check-circle {
-  transform: rotate(360deg);
+  animation: rotate 1s;
+}
+@media screen and (min-width: 1024px) {
+  .meals {
+    width: 300px;
+  }
+}
+
+.delay1 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.delay2 {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.delay3 {
+  animation: fadeInUp 3s ease-in-out;
+}
+
+.delay4 {
+  animation: fadeInUp 4s ease-in-out;
+}
+
+.full__menu h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding-left: 15px;
+  margin-top: 10px;
 }
 
 .cross {
@@ -553,7 +578,7 @@ header i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.5em;
+  line-height: 1.2em;
 }
 
 .last__line p {
@@ -562,14 +587,14 @@ header i {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   .last__line p {
     padding-right: 20px;
   }
 }
 
 .last__line span {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .btn__order button {
@@ -577,21 +602,19 @@ header i {
   border: 1px solid transparent;
   border-radius: 30px;
   color: white;
-  width: 180px;
-  height: 40px;
+  width: 220px;
+  height: 50px;
+  font-size: 1.1rem;
   border: none;
-  outline: none;
   cursor: pointer;
-  font-size: 0.8rem;
   font-weight: 500;
   box-shadow: 4px 4px 6px #332f2f;
   text-align: center;
   margin: 30px 0;
-  width: 50%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1400px) {
   .btn__order button {
-    width: 25%;
+    max-width: 200px;
   }
 }
 .btn__order button:hover {

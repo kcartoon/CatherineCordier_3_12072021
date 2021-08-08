@@ -43,12 +43,15 @@
             h2 {
                 padding: 40px 0 10px 20px;
                 @include tablet {
-                    display: flex;
-                    justify-content: center;
+                    text-align: center;
                 }
             }
             ul {
                 margin: 20px auto;
+                @include desktop {
+                    justify-content: space-between;
+                    max-width: 1400px;
+                }
             }
             p {
                 font-weight: bold;
@@ -91,8 +94,10 @@
             @include flex-config($flex: 1, $flex-direction: column);
             padding-bottom: 30px;
             h2 {
-                padding-left: 15px;
                 padding-top: 45px;
+            }
+            p {
+                font-size: 1.1rem;
             }
             @include tablet {
                 align-items: center;
@@ -105,20 +110,24 @@
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
-            @include desktop {
-                width: 90%;
+            @include large {
+                flex-wrap: wrap;
+                max-width: 1400px;
             }
         }
         
         .card {
             @include card;
             @include tablet {
-                width: 75%;
+                width: 75vw;
             }
-            @include desktop {
-                max-width: 40%;
+            @include laptop {
+                max-width: 45vw;
                 padding: 0;
                 margin: 10px;
+            }
+            @include desktop {
+                max-width: 640px;
             }
             img {
                 @include card-img;

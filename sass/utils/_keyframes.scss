@@ -8,6 +8,7 @@
         }
     }
     
+    //défilement horizontal
     @keyframes defilement-rtl {
         0% {
             transform: translate3d(0, 0, 0);
@@ -36,6 +37,17 @@
         }
     }
     
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     @keyframes grow {
         0%,
         100% {
@@ -50,10 +62,10 @@
     
     @keyframes rotate {
         from {
-            -webkit-transform: rotate(0deg);
+            -webkit-transform: rotate(360deg);
         }
         to {
-            -webkit-transform: rotate(360deg);
+            -webkit-transform: rotate(0deg);
         }
     }
     

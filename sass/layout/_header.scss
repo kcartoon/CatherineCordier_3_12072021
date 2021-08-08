@@ -1,4 +1,4 @@
-//Accueil
+//Accueil loading spinner
 .loader {
     @include flex-config ($flex: 2, $flex-direction: column, $align-items: center, $justify-content: center);
     background: $color-gris-light;
@@ -10,35 +10,33 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    animation: loader 4s ease-in-out 2s forwards;
+    animation: defilement-rtl 3s ease-in-out 2s forwards;
     .logo1 {
-        margin-top: 100px;
+        margin-top: 200px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         img {
             max-width: 200px;
             position: absolute;
-            animation: rotate 1s linear infinite;
+            animation: rotate 1.5s linear;
         }
     }
     .slogan1 {
         display: flex;
         justify-content: center;
+        text-align: center;
+        max-height: 100vh;
         border-radius: 10px;
         background: $color-primary;
-        line-height: 4rem;
+        line-height: 3rem;
         font-family: 'Shrikhand';
         color: $color-white;
         font-size: 1rem;
         margin-top: 50px;
         padding: 20px;
-        animation: defilement-rtl 3s infinite linear;
     }
 }
-
-
-/* Animation */
 
 // Page du site
 header {
